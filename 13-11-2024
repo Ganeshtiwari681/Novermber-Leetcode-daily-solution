@@ -1,0 +1,15 @@
+HashSet<Node> set=new HashSet<>();
+        // code here
+        Node temp1=head1;
+        Node temp2=head2;
+        while(temp1!=null){
+            set.add(temp1);
+            temp1=temp1.next;
+        }
+        while(temp2!=null){
+            if(set.contains(temp2)){
+                return temp2.data;
+            }
+            temp2=temp2.next; 
+        }
+        return -1;
